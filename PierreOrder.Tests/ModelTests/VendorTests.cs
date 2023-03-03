@@ -45,6 +45,14 @@ namespace PierreOrder.Tests
             string result = newVendor.Location;
             Assert.AreEqual(location, result);
         }
+       [TestMethod]
+        public void GetAll_ReturnsEmptyList_ListOfVendors()
+        {
+            List<Vendor> newList = new List<Vendor> { };
+            List<Vendor> result = Vendor.GetAll();
+            CollectionAssert.AreEqual(newList, result);
+        }
+    
     }
 
 }
