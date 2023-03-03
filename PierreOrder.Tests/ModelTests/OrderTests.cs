@@ -6,8 +6,12 @@ using System;
 namespace PierreOrder.Tests
 {
     [TestClass]
-    public class ItemTests
+    public class ItemTests : IDisposable
     {
+        public void Dispose()
+        {
+            Order.ClearAll();
+        }
 
         [TestMethod]
         public void ItemConstructor_CreatesInstanceOfItem_Item()
@@ -68,13 +72,19 @@ namespace PierreOrder.Tests
         [TestMethod]
         public void GetAll_ReturnsItems_ItemList()
         {
-            string name = "flour";
+            string name = "flour Order";
             string description = "2 bags";
             string date = "03-03-23";
             string price = "10";
-            Order newItem1 = new Order(name, description, date, price);
-            List<Order> newList = new List<Order> {newItem1};
+            Order newOrder1 = new Order(name, description, date, price);
+            string name2 = "Milk Order";
+            string description2 = "4 gallons";
+            string date2 = "03-01-23";
+            string price2 = "15.00";
+            Order newOrder2 = new Order(name2, description2, date2, price2);
+            List<Order> newList = new List<Order> { newOrder1, newOrder2 };
             List<Order> result = Order.GetAll();
+
             CollectionAssert.AreEqual(newList, result);
         }
 

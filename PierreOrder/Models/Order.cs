@@ -11,7 +11,7 @@ namespace PierreOrder.Models
 
         public string Price { get; set; }
 
-       private static List<Order> _instances = new List<Order> { };
+        private static List<Order> _instances = new List<Order> { };
 
 
         public Order(string name, string description, string date, string price)
@@ -20,7 +20,7 @@ namespace PierreOrder.Models
             Description = description;
             Date = date;
             Price = price;
-            //_instances.Add(this);
+            _instances.Add(this);
         }
 
 
@@ -28,6 +28,11 @@ namespace PierreOrder.Models
         public static List<Order> GetAll()
         {
             return _instances;
+        }
+
+        public static void ClearAll()
+        {
+            _instances.Clear();
         }
 
     }
