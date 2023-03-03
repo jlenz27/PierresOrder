@@ -25,14 +25,16 @@ namespace PierreOrder.Tests
             string result = newVendor.Name;
             Assert.AreEqual(name, result);
         }
+        [TestMethod]
         public void GetDescrition_ReturnsDescription_String()
         {
             string name = "Carol";
             string description = "neighbor";
-            Vendor newVendor = new Vendor(name, description, location);
+            Vendor newVendor = new Vendor(name, description, "test");
             string result = newVendor.Description;
             Assert.AreEqual(description, result);
         }
+        [TestMethod]
 
         public void GetLocation_ReturnsLocation_String()
         {

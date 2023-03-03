@@ -9,10 +9,13 @@ namespace PierreOrder.Models
 
     public string Description {get; set;}
 
-     public Vendor(string name, string description)
+    public string Location {get; set;}
+
+     public Vendor(string name, string description, string location)
         {
             Name = name;
             Description = description;
+            Location = location;
 
 
     }
