@@ -88,6 +88,23 @@ namespace PierreOrder.Tests
             CollectionAssert.AreEqual(newList, result);
         }
 
+            [TestMethod]
+        public void GetID_CreateItemIDReturnID_int()
+        {
+            string name = "flour Order";
+            string description = "2 bags";
+            string date = "03-03-23";
+            string price = "10";
+            Order newOrder1 = new Order(name, description, date, price);
+            string name2 = "Milk Order";
+            string description2 = "4 gallons";
+            string date2 = "03-01-23";
+            string price2 = "15.00";
+            Order newOrder2 = new Order(name2, description2, date2, price2);
+            int result = newOrder2.Id;
+            CollectionAssert.AreEqual(2, result);
+        }
+
     }
 
 
