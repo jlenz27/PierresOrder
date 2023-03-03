@@ -11,7 +11,7 @@ namespace PierreOrder.Models
 
     public string Location {get; set;}
 
-    //private static List<Vendor> _instances = new List<Vendor> { };
+    private static List<Vendor> _instances = new List<Vendor> { };
 
 
      public Vendor(string name, string description, string location)
