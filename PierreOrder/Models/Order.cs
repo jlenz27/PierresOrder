@@ -8,8 +8,8 @@ namespace PierreOrder.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public string Date { get; set; }
-
         public string Price { get; set; }
+        
 
         private static List<Order> _instances = new List<Order> { };
 
@@ -34,6 +34,7 @@ namespace PierreOrder.Models
         {
             _instances.Clear();
         }
+
 
     }
 
