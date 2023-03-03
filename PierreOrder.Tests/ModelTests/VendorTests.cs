@@ -13,7 +13,7 @@ namespace PierreOrder.Tests
         [TestMethod]
         public void ItemConstructor_CreatesInstanceOfItem_Item()
         {
-            Vendor newVendor = new Vendor();
+            Vendor newVendor = new Vendor("test");
             Assert.AreEqual(typeof(Vendor), newVendor.GetType());
         }
 
@@ -21,7 +21,7 @@ namespace PierreOrder.Tests
         public void GetName_ReturnsName_Stringg()
         {
             string name = "Carol";
-            Vendor newVendor = new Vendor();
+            Vendor newVendor = new Vendor(name);
             string result = newVendor.Name;
             Assert.AreEqual(name, result);
         }
