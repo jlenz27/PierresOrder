@@ -18,7 +18,7 @@ namespace PierreOrder.Tests
         }
 
          [TestMethod]
-        public void GetName_ReturnsName_String()
+        public void GetName_ReturnsName_Stringg()
         {
             string name = "Carol";
             Vendor newVendor = new Vendor();
