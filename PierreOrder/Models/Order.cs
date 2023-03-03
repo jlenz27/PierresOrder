@@ -7,15 +7,16 @@ namespace PierreOrder.Models
     {
         public string Name { get; set; }
         public string Description {get; set; }
-
         public string Date {get; set; }
 
-        public Order(string name, string description, string date)
+        public int Price {get; set;}
+
+        public Order(string name, string description, string date, int price)
         {
             Name = name;
             Description = description;
             Date = date;
-
+            Price = price;
         }
 
 
