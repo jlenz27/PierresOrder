@@ -65,6 +65,19 @@ namespace PierreOrder.Tests
             CollectionAssert.AreEqual(newList, result);
         }
 
+        [TestMethod]
+        public void GetAll_ReturnsItems_ItemList()
+        {
+            string name = "flour";
+            string description = "2 bags";
+            string date = "03-03-23";
+            string price = "10";
+            Order newItem1 = new Order(name, description, date, price);
+            List<Order> newList = new List<Order> {newItem1};
+            List<Order> result = Order.GetAll();
+            CollectionAssert.AreEqual(newList, result);
+        }
+
     }
 
 
