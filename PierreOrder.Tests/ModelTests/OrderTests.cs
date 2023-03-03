@@ -8,17 +8,18 @@ namespace PierreOrder.Tests
     [TestClass]
     public class ItemTests
     {
+      
         [TestMethod]
         public void ItemConstructor_CreatesInstanceOfItem_Item()
         {
-            Order newOrder = new Order("test");
+            Order newOrder = new Order("test", "test");
             Assert.AreEqual(typeof(Order), newOrder.GetType());
         }
         [TestMethod]
         public void GetName_ReturnsName_String()
         {
             string name = "flour";
-            Order newOrder = new Order(name);
+            Order newOrder = new Order(name, "test");
             string result = newOrder.Name;
             Assert.AreEqual(name, result);
         }
@@ -30,7 +31,7 @@ namespace PierreOrder.Tests
             string description = "2 bags";
             Order newOrder = new Order(name, description);
             string result = newOrder.Description;
-            Assert.AreEqual(name, result);
+            Assert.AreEqual(description, result);
         }
     }
 
