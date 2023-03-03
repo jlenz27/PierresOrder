@@ -15,7 +15,7 @@ namespace PierreOrder.Tests
             Assert.AreEqual(typeof(Order), newOrder.GetType());
         }
         [TestMethod]
-        public void GetProperty_ReturnsName_String()
+        public void GetName_ReturnsName_String()
         {
             string name = "flour";
             Order newOrder = new Order(name);
@@ -23,6 +23,15 @@ namespace PierreOrder.Tests
             Assert.AreEqual(name, result);
         }
 
+        [TestMethod]
+        public void GetDescription_ReturnsDescription_String()
+        {
+            string name = "flour";
+            string description = "2 bags";
+            Order newOrder = new Order(name, description);
+            string result = newOrder.Description;
+            Assert.AreEqual(name, result);
+        }
     }
 
 }
