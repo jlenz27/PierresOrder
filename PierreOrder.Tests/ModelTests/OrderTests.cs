@@ -41,7 +41,7 @@ namespace PierreOrder.Tests
             string description = "2 bags";
             string date = "03-03-23";
             Order newOrder = new Order(name, description, date);
-            string result = newOrder.date;
+            string result = newOrder.Date;
             Assert.AreEqual(date, result);
         }
     }
