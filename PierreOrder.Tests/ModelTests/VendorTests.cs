@@ -13,7 +13,7 @@ namespace PierreOrder.Tests
         [TestMethod]
         public void ItemConstructor_CreatesInstanceOfItem_Item()
         {
-            Vendor newVendor = new Vendor("test");
+            Vendor newVendor = new Vendor( "test", "test");
             Assert.AreEqual(typeof(Vendor), newVendor.GetType());
         }
 
