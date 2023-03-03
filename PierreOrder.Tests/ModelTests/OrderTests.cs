@@ -8,18 +8,18 @@ namespace PierreOrder.Tests
     [TestClass]
     public class ItemTests
     {
-      
+
         [TestMethod]
         public void ItemConstructor_CreatesInstanceOfItem_Item()
         {
-            Order newOrder = new Order("test", "test", "test");
+            Order newOrder = new Order("test", "test", "test", price);
             Assert.AreEqual(typeof(Order), newOrder.GetType());
         }
         [TestMethod]
         public void GetName_ReturnsName_String()
         {
             string name = "flour";
-            Order newOrder = new Order(name, "test", "test");
+            Order newOrder = new Order(name, "test", "test", price);
             string result = newOrder.Name;
             Assert.AreEqual(name, result);
         }
@@ -29,21 +29,35 @@ namespace PierreOrder.Tests
         {
             string name = "flour";
             string description = "2 bags";
-            Order newOrder = new Order(name, description, "test");
+            Order newOrder = new Order(name, description, "test", price);
             string result = newOrder.Description;
             Assert.AreEqual(description, result);
         }
 
-           [TestMethod]
+        [TestMethod]
         public void GetDate_ReturnsDate_string()
         {
             string name = "flour";
             string description = "2 bags";
             string date = "03-03-23";
-            Order newOrder = new Order(name, description, date);
+            Order newOrder = new Order(name, description, date, price);
             string result = newOrder.Date;
             Assert.AreEqual(date, result);
         }
+
+        [TestMethod]
+        public void GetPrice_ReturnsPrice_int()
+        {
+            string name = "flour";
+            string description = "2 bags";
+            string date = "03-03-23";
+            int price = 10;
+            Order newOrder = new Order(name, description, date, price);
+            string result = newOrder.Price;
+            Assert.AreEqual(price, result);
+        }
+
     }
+
 
 }
