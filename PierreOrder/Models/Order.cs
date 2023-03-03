@@ -5,13 +5,13 @@ namespace PierreOrder.Models
 {
     public class Order
     {
-        // public string Name { get; set; }
+        public string Name { get; set; }
 
-        // public Order(string name)
-        // {
-        //     Name = name;
+        public Order(string name)
+        {
+            Name = name;
 
-        // }
+        }
 
     }
 
