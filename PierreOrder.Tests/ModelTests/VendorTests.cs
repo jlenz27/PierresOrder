@@ -6,8 +6,13 @@ using System;
 namespace PierreOrder.Tests
 {
     [TestClass]
-    public class VendorTests
+    public class VendorTests : IDisposable
     {
+         public void Dispose()
+        {
+            Order.ClearAll();
+        }
+
 
 
         [TestMethod]
@@ -45,14 +50,32 @@ namespace PierreOrder.Tests
             string result = newVendor.Location;
             Assert.AreEqual(location, result);
         }
-       [TestMethod]
+        [TestMethod]
         public void GetAll_ReturnsEmptyList_ListOfVendors()
         {
             List<Vendor> newList = new List<Vendor> { };
             List<Vendor> result = Vendor.GetAll();
             CollectionAssert.AreEqual(newList, result);
         }
-    
+
+        [TestMethod]
+        public void GetAll_ReturnsItems_ItemList()
+        {
+            string name = "Carol";
+            string description = "neighbor";
+            string location = "upstate";
+            Vendor newVendor = new Vendor(name, description, location);
+            string name2 = "susie";
+            string description2 = "cousin";
+            string location2 = "upstate";
+            Vendor newVendor2 = new Vendor(name2, description2, location2);
+            List<Vendor> newList = new List<Vendor> { newVendor, newVendor2 };
+            List<Vendor> result = Vendor.GetAll();
+
+            CollectionAssert.AreEqual(newList, result);
+        }
+
+
     }
 
 }
