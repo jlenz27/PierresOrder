@@ -25,30 +25,30 @@ namespace PierreOrder.Tests
         [TestMethod]
         public void GetName_ReturnsName_String()
         {
-            string name = "Carol";
-            Vendor newVendor = new Vendor(name, "test", "test");
+            string vendorName = "Carol";
+            Vendor newVendor = new Vendor(vendorName, "test", "test");
             string result = newVendor.Name;
-            Assert.AreEqual(name, result);
+            Assert.AreEqual(vendorName, result);
         }
         [TestMethod]
         public void GetDescrition_ReturnsDescription_String()
         {
-            string name = "Carol";
-            string description = "neighbor";
-            Vendor newVendor = new Vendor(name, description, "test");
+            string vendorName = "Carol";
+            string vendorDescription = "neighbor";
+            Vendor newVendor = new Vendor(vendorName, vendorDescription, "test");
             string result = newVendor.Description;
-            Assert.AreEqual(description, result);
+            Assert.AreEqual(vendorDescription, result);
         }
         [TestMethod]
 
         public void GetLocation_ReturnsLocation_String()
         {
-            string name = "Carol";
-            string description = "neighbor";
-            string location = "upstate";
-            Vendor newVendor = new Vendor(name, description, location);
+            string vendorName = "Carol";
+            string vendorDescription = "neighbor";
+            string vendorLocation = "upstate";
+            Vendor newVendor = new Vendor(vendorName, vendorDescription, vendorLocation);
             string result = newVendor.Location;
-            Assert.AreEqual(location, result);
+            Assert.AreEqual(vendorLocation, result);
         }
         [TestMethod]
         public void GetAll_ReturnsEmptyList_ListOfVendors()
@@ -61,14 +61,14 @@ namespace PierreOrder.Tests
         [TestMethod]
         public void GetAll_ReturnsItems_ItemList()
         {
-            string name = "Carol";
-            string description = "neighbor";
-            string location = "upstate";
-            Vendor newVendor = new Vendor(name, description, location);
-            string name2 = "susie";
-            string description2 = "cousin";
-            string location2 = "upstate";
-            Vendor newVendor2 = new Vendor(name2, description2, location2);
+            string vendorName = "Carol";
+            string vendorDescription = "neighbor";
+            string vendorLocation = "upstate";
+            Vendor newVendor = new Vendor(vendorName, vendorDescription, vendorLocation);
+            string vendorName2 = "susie";
+            string vendorDescription2 = "cousin";
+            string vendorLocation2 = "upstate";
+            Vendor newVendor2 = new Vendor(vendorName2, vendorDescription2, vendorLocation2);
             List<Vendor> newList = new List<Vendor> { newVendor, newVendor2 };
             List<Vendor> result = Vendor.GetAll();
 
@@ -78,14 +78,14 @@ namespace PierreOrder.Tests
          [TestMethod]
         public void Find_ReturnsVendorList_Vendor()
         {
-            string name = "Carol";
-            string description = "neighbor";
-            string location = "upstate";
-            Vendor newVendor = new Vendor(name, description, location);
-            string name2 = "susie";
-            string description2 = "cousin";
-            string location2 = "upstate";
-            Vendor newVendor2 = new Vendor(name2, description2, location2);
+            string vendorName = "Carol";
+            string vendorDescription = "neighbor";
+            string vendorLocation = "upstate";
+            Vendor newVendor = new Vendor(vendorName, vendorDescription, vendorLocation);
+            string vendorName2 = "susie";
+            string vendorDescription2 = "cousin";
+            string vendorLocation2 = "upstate";
+            Vendor newVendor2 = new Vendor(vendorName2, vendorDescription2, vendorLocation2);
             Vendor result = Vendor.Find(2);
             Assert.AreEqual(newVendor2, result);
         }
