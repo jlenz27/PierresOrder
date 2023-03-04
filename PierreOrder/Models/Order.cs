@@ -6,6 +6,8 @@ namespace PierreOrder.Models
     public class Order
     {
         public string Title { get; set; }
+        public string VendorName { get; set; }
+
         public string Description { get; set; }
         public string Date { get; set; }
         public string Price { get; set; }
@@ -16,8 +18,9 @@ namespace PierreOrder.Models
         private static List<Order> _instances = new List<Order> { };
 
 
-        public Order(string title, string description, string date, string price)
+        public Order(string title, string description, string date, string price, string vendorName)
         {
+            VendorName = vendorName;
             Title = title;
             Description = description;
             Date = date;
