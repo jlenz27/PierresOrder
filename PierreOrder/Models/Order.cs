@@ -9,7 +9,7 @@ namespace PierreOrder.Models
         public string Description { get; set; }
         public string Date { get; set; }
         public string Price { get; set; }
-        
+
 
         private static List<Order> _instances = new List<Order> { };
 
@@ -21,6 +21,8 @@ namespace PierreOrder.Models
             Date = date;
             Price = price;
             _instances.Add(this);
+            Id = _instances.Count;
+
         }
 
 
@@ -35,6 +37,10 @@ namespace PierreOrder.Models
             _instances.Clear();
         }
 
+        public static Order Find(int searchId)
+        {
+            return _instances[searchId - 1];
+        }
 
     }
 
