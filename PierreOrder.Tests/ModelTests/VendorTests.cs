@@ -75,6 +75,22 @@ namespace PierreOrder.Tests
             CollectionAssert.AreEqual(newList, result);
         }
 
+         [TestMethod]
+        public void Find_ReturnsVendorList_Vendor()
+        {
+            string name = "Carol";
+            string description = "neighbor";
+            string location = "upstate";
+            Vendor newVendor = new Vendor(name, description, location);
+            string name2 = "susie";
+            string description2 = "cousin";
+            string location2 = "upstate";
+            Vendor newVendor2 = new Vendor(name2, description2, location2);
+            Vendor result = Vendor.Find(2);
+            Assert.AreEqual(newVendor2, result);
+            CollectionAssert.AreEqual(newList, result);
+        }
+
 
     }
 
