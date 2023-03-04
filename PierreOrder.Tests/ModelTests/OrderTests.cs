@@ -88,6 +88,8 @@ namespace PierreOrder.Tests
             CollectionAssert.AreEqual(newList, result);
         }
 
+        [TestMethod]
+
         public void Find_ReturnsItemsID_Order()
         {
             string name = "flour Order";
@@ -108,3 +110,5 @@ namespace PierreOrder.Tests
 
 
     }
+
+}
