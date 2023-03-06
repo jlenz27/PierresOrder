@@ -3,15 +3,15 @@
   }
   @using PierreOrder.Models;
 
-    <h3>Here are the orders for @Model["vendor"].Name:</h3>
+<h3>@Model["vendor"].Name Orders:</h3>
 
-    <ol>
-      @foreach (Order order in @Model["order"])
-      {
-        <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Description</a></li>
-      }
-    </ol>
+<ol>
+@foreach (Order order in @Model["order"])
+{
+  <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Title</a></li>
+}
+</ol>
 
-    <p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add A New Order</a></p>
-    <p><a href='/vendors'>Back To List of Vendors</a></p>
-    <p><a href='/'>Home Page</a></p>
+<p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add Order</a></p>
+<p><a href='/vendors'>Vendors</a></p>
+<p><a href='/'>Home</a></p>

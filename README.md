@@ -1,36 +1,33 @@
-## Parcels
+# _{Pierre's Bakery Order}_
 
-#### By Molly Donegan, Brishna Bakshev & John Lenz
+#### By _John lenz_
 
-## ☕ Technologies Used ☕
+#### _{A C# application that creates a bakery order form that allows the user to  have a vendor and order page to keep track of everything. }_
 
-* C# 
-* .NET 6.0 
-* dotnet script REPL
+## Technologies Used
 
-## Description 
-An application where users can submit a form with the dimensions and weight of their Parcel. The site will return the "cost" to ship their Parcel.
+* _C#_
+*_MSTest_
+* _HTML_
+* _.Net_
 
-## ☕ Setup Instructions ☕
 
-1. Clone this repo.
-2. Install the [.NET 6 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
-3. Open your terminal (e.g., Terminal or GitBash) and navigate to this project's production directory called "Parcels".
-4. In the command line, run the command "dotnet run" to compile and execute the console application. Since this is a console application, you'll interact with it through text commands in your terminal.
-5. Optionally, you can run "dotnet build" to compile this console app without running it.
-6. Confirm all business logic tests pass with MSTest by running commands (not including the dollar symbol):
-`$ dotnet restore ./Parcels.Tests`
-`$ dotnet test ./Parcels.Tests`
+### Setup
+* _Clone the Repo_
+* _Open your terminal and navigate to PierreOrder directory_
+* _In the Command Line run dotnet restore_
+* _In the Command Line run dotnet run to run the application_
+* _In your terminal navigate to PierreBakery.Tests and run dotnet test to see the tests of the program_
+
 
 ## Known Bugs
 
-None at this time.
+* _There are no known issues_
 
-## ☕ License ☕
-Enjoy the app! If you have questions or suggestions for fixing the code, please contact me!
+## License
 
-MIT License Copyright (c) 2023 Molly Donegan, Brishna Bakshev & John Lenz. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+ Everyone is permitted to copy and distribute verbatim copies
+ of this license document, but changing it is not allowed.
+ 
+Copyright (c) _2023_ _John Lenz_

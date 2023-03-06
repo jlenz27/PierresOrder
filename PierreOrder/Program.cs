@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace PierreOrder
+namespace PierresOrder
 {
   class Program
   {
@@ -13,9 +13,9 @@ namespace PierreOrder
 
       WebApplication app = builder.Build();
 
-    //   app.UseDeveloperExceptionPage();
+      app.UseDeveloperExceptionPage();
       app.UseHttpsRedirection();
-
+      app.UseStaticFiles();
       app.UseRouting();
 
       app.MapControllerRoute(
