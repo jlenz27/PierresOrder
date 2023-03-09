@@ -5,8 +5,21 @@ using PierreOrder.Models;
 
 namespace PierreOrder.Controllers
 {
-  public class VendorsController : Controller
+ public class VendorsController : Controller
   {
+    [HttpGet("/vendors/new")]
+    public ActionResult New()
+    {
+      return View();
+    }
+
+    [HttpPost("/vendors")]
+    public ActionResult Create(string vendorName, string vendorDescription, string vendorLocation)
+    {
+      Vendor newVendor = new Vendor(vendorName, vendorDescription, vendorLocation);
+      return RedirectToAction("Index");
+    }
+
     [HttpGet("/vendors")]
     public ActionResult Index()
     {
@@ -14,19 +27,6 @@ namespace PierreOrder.Controllers
       return View(allVendors);
     }
 
-    [HttpGet("/vendors/new")]
-    public ActionResult New()
-    {
-      return View();
-    }
-    
-    [HttpPost("/vendors")]
-    public ActionResult Create(string vendorName, string vendorDescription, string vendorLocation)
-    {
-      Vendor newVendor = new Vendor(vendorName, vendorDescription, vendorLocation);
-      return RedirectToAction("Index");
-    }
-    
     [HttpGet("/vendors/{id}")]
     public ActionResult Show(int id)
     {
@@ -37,18 +37,19 @@ namespace PierreOrder.Controllers
       model.Add("orders", vendorOrders);
       return View(model);
     }
-
+    
     [HttpPost("/vendors/{vendorId}/orders")]
-    public ActionResult Create(string title, int vendorId)
+    public ActionResult Create(int vendorId, string orderTitle, string orderDetails, string orderDate, string orderPrice, string orderDescription)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
       Vendor foundVendor = Vendor.Find(vendorId);
-      Order newOrder = new Order(title, "test", "test","test", "test");
+      Order newOrder = new Order(orderTitle, orderDetails, orderDate, orderPrice, orderDescription);
       foundVendor.AddOrder(newOrder);
       List<Order> vendorOrders = foundVendor.Orders;
       model.Add("orders", vendorOrders);
       model.Add("vendor", foundVendor);
       return View("Show", model);
     }
+
   }
 }

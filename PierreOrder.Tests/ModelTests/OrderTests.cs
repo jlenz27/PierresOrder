@@ -33,7 +33,7 @@ namespace PierreOrder.Tests
         {
             string title = "flour";
             string description = "2 bags";
-            Order newOrder = new Order(title, description, "test", "10", "test");
+            Order newOrder = new Order(title, description, description, description, description);
             string result = newOrder.Description;
             Assert.AreEqual(description, result);
         }

@@ -1,25 +1,25 @@
 @{
   Layout = "_Layout";
 }
-
-<h1>Add a Order to @Model.vednorName</h1>
-<p>Add an Order here:</p>
+<h2>Add a new order for @Model.Name</h2>
 
 <form action="/vendors/@Model.Id/orders" method="post">
-  <label for="title">Order title</label>
-  <input id="title" name="title" type="text">
+  <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id">
   <br>
-  <label for="description">Order description</label>
-  <input id="description" name="dscription" type="text">
+  <label for="orderTitle">Order Title:</label>
+  <input id="orderTitle" name="orderTitle" type="text"><br>
   <br>
-  <label for="price">Order price</label>
-  <input id="price" name="price" type="text">
+  <label for="orderDetails">Order Details:</label>
+  <input id="orderDetails" name="orderDetails" type="text"><br>
   <br>
-  <label for="date">Order date</label>
-  <input id="date" name="date" type="text">
+  <label for="orderDate">Order Date:</label>
+  <input id="orderDate" name="orderDate" type="text"><br>
   <br>
-  <button type="submit">Add</button>
-</form>
-
-<p><a href="/">Back to the homepage</a></p>
-<p><a href="/vendors">Back to list of vendors</a></p>
+  <label for="orderPrice">Order Price:</label>
+  <input id="orderPrice" name="orderPrice" type="text"><br>
+  <br>
+  <button type="submit" class="button">Add Order</button>
+  </form>
+  <br><br>
+  <p><a href="/vendor">Return To Vendor List</a></p>
+  <p><a href="/">Return to the Index</a></p>
